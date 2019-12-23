@@ -1,0 +1,773 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	 "hex to string...": {
+	 	"scope": "javascript,typescript",
+	 	"prefix": "hex_to_string",
+	 	"body": [
+			"function HextoString(_hex) {",
+			"	/* remover la / de unicode caracteres... agregar otra contrabarra al medio de / /, y agregar dos comillas al final... */",
+			"	var __hex = _hex;",
+			"	var t = __hex.replace(/\\/g, "");",
+			"	var __number = parseInt(t, 16);",
+			"	return (__number);",
+			"  }",
+	 	],
+	 	"description": "Javascript comments..."
+	 },
+	 "Javascript comment...": {
+	 	"scope": "javascript,typescript",
+	 	"prefix": "com",
+	 	"body": [
+			 "/*",
+			 "$1",
+			 "*/",
+	 	],
+	 	"description": "Javascript comments..."
+	 },
+
+	"Python django conf.": {
+		"scope": "python, python",
+		"prefix": "django-conf",
+		"body": [
+
+"from django.contrib.messages import constants as messages",
+"# 3 Party",
+"'crispy_forms',",
+"# Custom Django auth settings",
+"AUTH_USER_MODEL = 'app_db.Usuarios'",
+"LOGIN_URL = 'cuentas_ingresar'",
+"LOGOUT_URL = 'cuentas_salir'",
+"LOGIN_REDIRECT_URL = 'home'",
+"LOGOUT_REDIRECT_URL = 'home'",
+"# Messages built-in framework",
+"MESSAGE_TAGS = {",
+"messages.DEBUG: 'alert-secondary',",
+"messages.INFO: 'alert-info',",
+"messages.SUCCESS: 'alert-success',",
+"messages.WARNING: 'alert-warning',",
+"messages.ERROR: 'alert-danger',",
+"}",
+"# Third party apps configuration",
+"CRISPY_TEMPLATE_PACK = 'bootstrap3'",
+"# Session time",
+"SESSION_EXPIRE_AT_BROWSER_CLOSE = True",
+"SESSION_COOKIE_AGE = 60 * 60 #",
+
+
+		],
+		"description": "Django custom config.."
+	},
+	 
+	"Javascript Random Ints array ": {
+		"scope": "html, python, javascript ,django-html ",
+		"prefix": "j_random_array",
+		"body": [
+			
+			"Array.from({length: 40}, () => Math.floor(Math.random() * 40));"
+
+	
+		],
+		"description": "Random ints array of size n..."
+	},
+	"Python function docstring. ": {
+		"scope": "python, django-html ",
+		"prefix": "doc-func",
+		"body": [
+			"''' <- Cambiar por dobles...",
+			"Prints what the animals name is and what sound it makes.",
+
+  "     If the argument `sound` isn't passed in, the default Animal",
+   "     sound is used.",
+
+  "     Parameters",
+   "     ----------",
+   "     sound : str, optional",
+   "         The sound the animal makes (default is None)",
+
+  "    Raises",
+   "     ------",
+   "     NotImplementedError",
+   "         If no sound is set for the animal or passed in as a",
+   "		parameter.",
+			"Cambiar por dobles... ---> '''",
+	
+		],
+		"description": "Docstring boilerplate for python functions..."
+	},
+	"Python class docstring. ": {
+		"scope": "python, django-html ",
+		"prefix": "doc-class",
+		"body": [
+			"''' <- Cambiar por dobles...",
+			"A class used to represent an Animal",
+		"",
+			"...",
+		"",
+			"Attributes",
+			"----------",
+			"says_str : str",
+			"	a formatted string to print out what the animal says",
+			"name : str",
+			"	the name of the animal",
+			"sound : str",
+			"	the sound that the animal makes",
+			"num_legs : int",
+			"	the number of legs the animal has (default 4)",
+		"",
+			"Methods",
+			"-------",
+			"says(sound=None)",
+			"	Prints the animals name and what sound it makes",
+			"Cambiar por dobles... ---> '''",
+	
+		],
+		"description": "Docstring boilerplate for python class..."
+	},
+	"D3 JS Template - Practice ": {
+		"scope": "html, python, javascript ,django-html ",
+		"prefix": "d3_temp",
+		"body": [
+			"<!DOCTYPE html>",
+			"<html>",
+			"<head>",
+			"<meta charset='utf-8'>",
+			"<title>Histogram SVG</title>",
+			"<link rel='stylesheet' type = 'text/css' href='style.css'>",
+			"<!-- Load d3.js -->",
+			"<script src='https://d3js.org/d3.v4.js'></script>",
+			"<script src='script.js'></script>",
+			"</head>",
+			"<body onload='graficar()'>",
+					"",
+			"</body>",
+			"</html>",
+	
+		],
+		"description": "Random ints array of size n..."
+	},
+	 
+	 
+	"JSON dict View ": {
+		"scope": "html, python, django-html ",
+		"prefix": "json_dict",
+		"body": [
+			
+
+			"def get_data_years(request):",
+			"key = [choice([i for i in range(1900,2019)]) for i in range( 0,20)]",
+			"val = [choice([i for i in range(1000,2019)]) for i in range( 0,20)]",
+		"",
+			"data = json.dumps(dict(zip(key, val)))",
+		"",
+			"if request.method == 'GET':",
+			"	return HttpResponse(data, content_type='application/json')",
+	
+		],
+		"description": "json dict view-fake."
+	},
+	 
+	 
+	"var csrf token javascript": {
+		"scope": "html, python,javascript,  django-html ",
+		"prefix": "var_csrf",
+		"body": [
+			"var _csrf = {csrfmiddlewaretoken: '{{ csrf_token }}'};",
+		],
+		"description": "Includes csrf token var for ajax proposites..."
+	},
+	 
+	"high charts include html ": {
+		"scope": "html, python, django-html ",
+		"prefix": "high-cnd",
+		"body": [
+			"<!-- Include Highcharts -->",
+			"<script src='https://code.highcharts.com/highcharts.js'></script>",
+	
+		],
+		"description": "Include high charts cdn."
+	},
+	 
+	"d3 js include html ": {
+		"scope": "html, python, django-html ",
+		"prefix": "d3-cnd",
+		"body": [
+		
+			"<!-- Load d3.js -->",
+			"<script src='https://d3js.org/d3.v4.js'></script>",
+
+	
+		],
+		"description": "Include D3js cdn."
+	},
+	 
+	"simple title ": {
+		"scope": "python",
+		"prefix": "title",
+		"body": [
+			
+			"#<=================================>#"
+			"#            $1					 #"
+			"#<=================================>#"
+
+		],
+		"description": "Simple title for sections."
+	},
+	 
+	"3 apps title": {
+		"scope": "python",
+		"prefix": "title_3_party",
+		"body": [
+	 
+	   "#<===========================================================>#",
+	   "#..#######.....########.....###....########..########.##....###",
+	   "#.##.....##....##.....##...##.##...##.....##....##.....##..##.#",
+	   "#........##....##.....##..##...##..##.....##....##......####..#",
+	   "#..#######.....########..##.....##.########.....##.......##...#",
+	   "#........##....##........#########.##...##......##.......##...#",
+	   "#.##.....##....##........##.....##.##....##.....##.......##...#",
+	   "#..#######.....##........##.....##.##.....##....##.......##...#",
+	   "#<===========================================================>#",
+	   "",
+	   "",
+	   "",
+	   "",
+	   "",
+	   "",
+	   "#<===========================Fin=============================>#",
+
+		],
+		"description": "3 Party title for django configs..."
+	},
+	
+	"my apps title": {
+		"scope": "python",
+		"prefix": "title_my_apps",
+		"body": [
+	 
+		
+		
+			"#<==============================================================>#",
+			"#.##.....##.##....##.......###....########..########...######....#",
+			"#.###...###..##..##.......##.##...##.....##.##.....##.##....##...#",
+			"#.####.####...####.......##...##..##.....##.##.....##.##.........#",
+			"#.##.###.##....##.......##.....##.########..########...######....#",
+			"#.##.....##....##.......#########.##........##..............##...#",
+			"#.##.....##....##.......##.....##.##........##........##....##...#",
+			"#.##.....##....##.......##.....##.##........##.........######....#",
+			"#<==============================================================>#",
+			"",
+			"",
+			"",
+			"",
+			"#<===========================Fin================================>#",
+
+		],
+		"description": "My Apps title for django configs..."
+	},
+	
+
+
+
+
+
+	"json_view": {
+		"scope": "python",
+		"prefix": "json_view",
+		"body": [
+			
+			"def Administracion_Json_Search_x_Nombre(request):",
+			"' Retorna un objeto json con los usuarios registrados mes.'   ",
+			"if request.method == 'POST':",
+			"	name = request.POST['nombre']",
+			"	u = Usuarios.objects.filter(perfil_nombre__icontains = name)",
+			"	response = serializers.serialize('json', u)",
+			"	return HttpResponse(response, content_type='application/json')",
+			"",
+			"",
+			"ALTERNATIVA",
+			"from django.http import JsonResponse",
+		"	def get_data(request):",
+    	"	data = [i for i in range(0,100)]",
+    "",
+    	"if request.method == 'GET':",
+        "data = {",
+        "    'cfci': choice(data),",
+        "    'cfcii': choice(data),",
+        "    'ch': choice(data),",
+        "    'o': choice(data),",
+        "    'co': choice(data),",
+        "    'ho': choice(data),",
+        "}",
+        "return JsonResponse(data, content_type='application/json')",
+
+
+		   
+
+		],
+		"description": "json view for 'help' proposites..."
+	},
+	
+	
+	"quimical_notations": {
+		"scope": "html, javascript,django-html",
+		"prefix": "quim",
+		"body": [
+			
+			"<sup>119</sup><sub>50</sub>Sn<sup>2+</sup>",
+
+		   
+		   
+
+		],
+		"description": "Quimical notations example..."
+	},
+	
+	 
+	"chart.": {
+		"scope": "html, javascript,django-html",
+		"prefix": "chartjs",
+		"body": [
+			
+			"<!-- Chart JS -->",
+			"<script src='https://cdn.jsdelivr.net/npm/chart.js@2.9.2/dist/Chart.min.js'></script>  ",
+			"<canvas height='50' id='usuariosxsexo' width='150'></canvas>",
+			"",
+			"",
+			"var usuariosxsexo = document.getElementById('usuariosxsexo').getContext('2d');",
+			"",
+			"",
+			"var chart_usuariosxrol = new Chart(usuariosxrol, {",
+			"	type: 'bar',",
+			"	data: {",
+			"		labels: [",
+			"		   ",
+			"		],",
+			"		datasets: [",
+			"			{",
+			"				data: [],",
+			"				",
+			"				backgroundColor: [",
+			"					",
+			"				],",
+			"				borderColor: [",
+"",
+			"					",
+			"				],",
+			"				borderWidth: 1",
+			"			}",
+			"		]",
+			"	},",
+			"	options: {",
+			"		legend:{",
+			"			display : false,",
+			"			position : 'bottom',",
+			"		},",
+			"		title: {",
+			"			display: true,",
+			"			text: 'Socios distribuidos por Rol de Usuario.'",
+			"		},",
+			"		scales: {",
+			"			yAxes: [",
+			"				{",
+			"					display:true,",
+			"					ticks: {",
+			"						beginAtZero: true",
+			"					}",
+			"				}",
+			"			]",
+			"		}",
+			"	}",
+			"});",
+
+		   
+		   
+
+		],
+		"description": "Modelo de grafico con chartjs..."
+	},
+	
+	
+	"AJAX.": {
+		"scope": "html, javascript,django-html",
+		"prefix": "ajax",
+		"body": [
+			
+			"$.ajax({",
+				"type: 'POST',",
+				"url: _x_users_url,",
+				"data: {",
+				  "csrfmiddlewaretoken: '{{ csrf_token }}',",
+				  "'username': $('#input_username').val(),",
+				  "},",
+				"dataType: 'json',",
+				"success: function (response) {",
+				  "console.log(response);",
+					"",
+					"",
+				"}",
+			"});",
+
+		],
+		"description": "Funcion ajax para llamadas..."
+	},
+
+	"random_colors.": {
+		"scope": "javascript, html, django-html",
+		"prefix": "r-color",
+		"body": [
+			"function getRandomColor() {",
+			"	var letters = '0123456789ABCDEF'.split('');",
+			"	var color = '#';",
+			"	for (var i = 0; i < 6; i++ ) {",
+			"		color += letters[Math.floor(Math.random() * 16)];",
+			"	}",
+			"	return color;",
+			"}",
+
+
+		],
+		"description": "Function that returns a random color..."
+	},
+	"Django Decorators.": {
+		"scope": "python, python",
+		"prefix": "d-decor",
+		"body": [
+			"from django.utils.decorators import method_decorator",
+			"from django.contrib.auth.decorators import login_required",
+			"from app_cuentas.decorators import socio_required",
+			"",
+			"",
+			"@method_decorator([login_required, socio_required], name='dispatch')",
+
+
+		],
+		"description": "Decorators for django views..."
+	},
+	"view_extra_content": {
+		"scope": "python, python",
+		"prefix": "extra_view_cont",
+		"body": [
+			"dat = date.today()",
+    		"nuevos =  Usuarios.objects.filter(date_joined__day=dat.day, date_joined__month=dat.month, date_joined__year=dat.year)",
+			"extra_context = {",
+			"	'users_count': len(Usuarios.objects.all()),",
+			"	'users_new_count': len(nuevos),",
+			"	'title': 'Gym - Full Administracion' ,",
+			" }",
+		
+
+		],
+		"description": "Extra contents for django views......"
+	},
+	"Django Decorators.": {
+		"scope": "python, html, python",
+		"prefix": "style",
+		"body": [
+			"<style media='screen'>",
+				"$1",
+"                ",
+        	"</style>",
+		],
+		"description": "Includes css STYLE tags..."
+	},
+	"Menu cabecera bootstrap.": {
+		"scope": "python, html, python",
+		"prefix": "menu-bootstrap",
+		"body": [
+			"<!-- Empieza El Menu -->",
+			"<nav class='navbar navbar-inverse'>",
+					"<div class='container-fluid'>",
+					  "<!-- Brand and toggle get grouped for better mobile display -->",
+					  "<div class='navbar-header'>",
+						"<button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded="false">",
+						  "<span class='sr-only'>Toggle navigation</span>",
+						  "<span class='icon-bar'></span>",
+						  "<span class='icon-bar'></span>",
+						  "<span class='icon-bar'></span>",
+						"</button>",
+						"<a class='navbar-brand' href='#'>Socios</a>",
+					  "</div>",
+"				  ",
+					  "<!-- Collect the nav links, forms, and other content for toggling -->",
+					  "<div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>",
+						"<ul class='nav navbar-nav'>",
+"						  ",
+"						  ",
+						"</ul>",
+"					   ",
+						"<ul class='nav navbar-nav navbar-right'>",
+"						  ",
+						  "<li>",
+							"<a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>",
+							  "<i class='fa fa-envelope-open'></i>",
+							  "<span class='badge'>0</span>",
+							"</a>",
+						  "</li>",
+						  "<li>",
+							"<a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>",
+							  "<i class='fa fa-bell'></i>",
+							  "<span class='badge'>0</span>",
+							"</a>",
+						  "</li>",
+						  "<li>",
+							"<a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>",
+							  "<i class='fa fa-flag'></i>",
+							  "<span class='badge'>0</span>",
+							"</a>",
+						  "</li>",
+"						  ",
+						  "<li class='dropdown'>",
+							"<a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'><i class='fa fa-cogs'></i> Configuracion</a>",
+							"<ul class='dropdown-menu'>",
+							  "<li><a href='#'><i class='fa fa-address-card'></i>  Perfil</a></li>",
+							  "<li role='separator' class='divider'></li>",
+							  "<li><a href='#'><i class='fa fa-power-off'></i> Salir</a></li>",
+							"</ul>",
+						  "</li>",
+						"</ul>",
+					  "</div><!-- /.navbar-collapse -->",
+					"</div><!-- /.container-fluid -->",
+			"</nav>",
+			"<!-- Fin Menu -->",
+
+		],
+		"description": "Decorators for django views..."
+	},
+	"Crispy form base.": {
+		"scope": "python, html, python",
+		"prefix": "crispy-form",
+		"body": [
+		"<form method='post'>",
+			"{% csrf_token %}",
+			"{{ form|crispy }}",
+			"<button type='submit' class='btn btn-primary'>Sign in</button>",
+		  "</form>",
+		],
+		"description": "Crispy form base."
+	},
+	"Hide and show bootstrap tabs.": {
+		"scope": "python, html, python",
+		"prefix": "nav-hide",
+		"body": [
+			"<div class='container'>",
+            "        <ul class='nav nav-tabs'>",
+            "          <!-- add data-toggle attribute to the anchors -->",
+            "          <li class='active'><a data-toggle='tab' href='#home'>Home</a></li>",
+            "          <li><a data-toggle='tab' href='#menu1'>Menu 1</a></li>",
+            "          <li><a data-toggle='tab' href='#menu2'>Menu 2</a></li>",
+            "        </ul>",
+            "          <div class='tab-content'>",
+            "          <div id='home' class='tab-pane fade in active'>",
+            "            <h3>HOME</h3>",
+            "            <p>Some content.</p>",
+            "          </div>",
+            "          <div id='menu1' class='tab-pane fade'>",
+            "            <h3>Menu 1</h3>",
+            "            <p>Some content in menu 1.</p>",
+            "          </div>",
+            "          <div id='menu2' class='tab-pane fade'>",
+            "            <h3>Menu 2</h3>",
+            "            <p>Some content in menu 2.</p>",
+            "          </div>",
+            "        </div>",
+            "</div>",
+
+		],
+		"description": "Registration form django."
+	},
+	"Registration form.": {
+		"scope": "python, html, python",
+		"prefix": "reg-form2",
+		"body": [
+			"class Nuevo_Usuario_Form(UserCreationForm):",
+    		"username = forms.CharField(required=True, min_length=6, label='<i class='fa fa-user-md'></i> Usuario')",
+    		"password1 = forms.CharField(required=True, min_length=8, label='<i class='fa fa-lock'></i> Contraseña', widget=forms.PasswordInput())",
+    		"password2 = forms.CharField(required=True, min_length=8, label='<i class='fa fa-lock'></i> Contraseña', widget=forms.PasswordInput())",
+    		"email = forms.CharField(required=True, min_length=8, label='<i class='fa fa-envelope'></i> Email',widget=forms.EmailInput())",
+    		"class Meta:",
+    		"    model = Usuarios",
+    		"    fields = ['email','username', 'password1', 'password2']",
+
+		],
+		"description": "Registration form django."
+	},
+	"Lorem pic.": {
+		"scope": "python, html, python",
+		"prefix": "lorempic",
+		"body": [
+			"https://i.pravatar.cc/$0",
+		],
+		"description": "Lorem pic."
+	},
+	"Python Enviroment headers.": {
+		"scope": "python, python",
+		"prefix": "pyenv",
+		"body": [
+
+			"#!/usr/bin/env python",
+			"# -*- coding: utf-8 -*-",
+			"from __future__ import unicode_literals",
+
+		],
+		"description": "Python Env headers."
+	},
+	"Registration form django.": {
+		"scope": "python, python, html",
+		"prefix": "reg-form",
+		"body": [
+			"class Nuevo_Socio(UserCreationForm):",
+			"	username = forms.CharField(required=True, min_length=6, label='<i class='fa fa-user-circle'></i> Usuario')",
+			"	password1 = forms.CharField(required=True, min_length=8, label='<i class='fa fa-lock'></i> Contraseña', widget=forms.PasswordInput())",
+			"	password2 = forms.CharField(required=True, min_length=8, label='<i class='fa fa-lock'></i> Repetir Contraseña', widget=forms.PasswordInput())",
+
+			"	class Meta:",
+			"		model = User",
+			"		fields = ['username', 'password1', 'password2']",
+        
+
+
+
+
+		],
+		"description": "List View para Views.py."
+	},
+	"List View Django": {
+		"scope": "python, python",
+		"prefix": "list-view-view",
+		"body": [
+			"class UserListView(ListView):",
+    		"	model = User",
+    		"	template_name = 'core/user_list.html'  # Default: <app_label>/<model_name>_list.html",
+    		"	context_object_name = 'users'  # Default: object_list",
+    		"	paginate_by = 10",
+    		"	queryset = User.objects.all()  # Default: Model.objects.all()",
+
+
+		],
+		"description": "List View para Views.py."
+	},
+	"Load Crispy Forms": {
+		"scope": "html,html, django-html",
+		"prefix": "load-crispy",
+		"body": [
+			"{% load crispy_forms_tags %}",
+
+
+		],
+		"description": "Agregar Crispy template tag."
+	},
+	"Pagination - html": {
+		"scope": "html,html, django-html",
+		"prefix": "pag",
+		"body": [
+			"<nav>",
+			"{% if is_paginated %}",
+			"<ul class='pagination'>",
+			"{% if page_obj.has_previous %}",
+			"<li><a href='?page={{ page_obj.previous_page_number }}'>&laquo;</a></li>",
+			"{% endif %}",
+					"",
+			"{% for i in paginator.page_range %}",
+			"<li {% if page_obj.number == i %} class='active' {% endif %}>",
+			"<a href='?page={{i}}'>{{ i }}</a>",
+			"</li>",
+			"{% endfor %}",
+					"",
+			"{% if page_obj.has_next %}",
+			"<li><a href='?page={{ page_obj.next_page_number }}'>&raquo;</a></li>",
+			"{% endif %}",
+			"</ul>",
+			"{% endif %}",
+			"</nav>",
+
+
+		],
+		"description": "Agregar Crispy template tag."
+	},
+	"Alert Titulos": {
+		"scope": "html,html, django-html",
+		"prefix": "alert-title",
+		"body": [
+			"<div class='alert alert-info' role='alert'>",
+            "	<center><h3>$1</h3></center>",
+        	"</div>",
+
+		],
+		"description": "Recuadro para titulos."
+	},
+	"Bootstrap Nav": {
+		"scope": "html,html, django-html",
+		"prefix": "nav-with/",
+		"body": [
+			"<ol class='breadcrumb'>",
+			"<li><a href='#'>Home</a></li>",
+			"<li><a href='#'>Library</a></li>",
+			"<li class='active'>Data</li>",
+			"</ol>",
+			
+		],
+		"description": "Navication bootstrap."
+	},
+	"TemplateView Get": {
+		"scope": "python,python",
+		"prefix": "temp-get",
+		"body": [
+				"class Home(TemplateView):",
+				"	template_name = 'test_home.html'",
+				"	def get(self, request):",
+				"		c = {",
+				"		'title':'Test Home',",
+				"		'active': True,",
+				"		",
+				"		}",
+				"		return render(request, self.template_name, c)",
+			
+		],
+		"description": "Template View Get Method."
+	},
+	"Awesome Fonts Link": {
+		"scope": "html,html, django-html",
+		"prefix": "awesome",
+		"body": [
+			"<!-- Awesome Fonts -->",
+			"<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' crossorigin='anonymous'>",
+			
+		],
+		"description": "Font awesome link."
+	},
+	"Html Comment": {
+		"scope": "html,html, django-html",
+		"prefix": "com",
+		"body": [
+			"<!-- $1 -->",
+		],
+		"description": "HTML comentario."
+	},
+	"Nav Stacked": {
+		"scope": "html,html, django-html",
+		"prefix": "nav-stack",
+		"body": [
+		"<ul class='nav nav-pills nav-stacked'>",
+        "	<li role='presentation'><a href='#'>$1</a></li>",
+        "	<li role='presentation'><a href='#'>$2</a></li>",
+        "	<li role='presentation'><a href='#'>$3</a></li>",
+      	"</ul>",
+		],
+		"description": "Nav para menus laterales."
+	}
+}
